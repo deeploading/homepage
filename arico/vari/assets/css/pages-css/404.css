@@ -1,0 +1,40 @@
+.error-area {
+  height: 100vh;
+  background-color: var(--sky-color);
+}
+
+.error-area .error-item {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.error-area .error-item h1 {
+  font-size: 150px;
+  margin-bottom: 5px;
+  color: var(--white-color);
+}
+
+.error-area .error-item h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: var(--white-color);
+}
+
+.error-area .error-item p {
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--white-color);
+}
+
+@media only screen and (max-width: 767px) {
+  .error-area .error-item h1 {
+    font-size: 100px;
+  }
+  .error-area .error-item h2 {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=404.css.map */

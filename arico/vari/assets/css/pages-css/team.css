@@ -1,0 +1,20 @@
+.team-area.two {
+  background-color: var(--white-color);
+}
+
+.team-area.two .section-title h2 {
+  color: var(--blue-color);
+}
+
+.team-area.two .team-item .top img:nth-child(2) {
+  width: 100%;
+}
+
+.team-area.two .team-item .bottom h3 {
+  color: var(--blue-color);
+}
+
+.team-area.two .team-item .bottom span {
+  color: var(--paragraph-color);
+}
+/*# sourceMappingURL=team.css.map */

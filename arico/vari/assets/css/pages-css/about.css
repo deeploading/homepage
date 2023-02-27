@@ -1,0 +1,100 @@
+.title-bg-about {
+  background-image: url("../../images/title/new_bg5.jpg");
+}
+
+.page-title-area {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 480px;
+}
+
+.page-title-area:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--blue-color);
+  opacity: .80;
+}
+
+.page-title-area .title-content {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  margin-top: 65px;
+}
+
+.page-title-area .title-content h2 {
+  font-size: 30px;
+  margin-bottom: 12px;
+  color: var(--white-color);
+}
+
+.page-title-area .title-content ul {
+  margin: 0;
+  padding: 0;
+}
+
+.page-title-area .title-content ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+}
+
+.page-title-area .title-content ul li:before {
+  position: absolute;
+  content: '/';
+  top: 0;
+  right: -16px;
+  color: var(--white-color);
+}
+
+.page-title-area .title-content ul li:last-child:before {
+  display: none;
+}
+
+.page-title-area .title-content ul li a {
+  display: inline-block;
+  color: var(--white-color);
+}
+
+.page-title-area .title-content ul li a:hover {
+  color: var(--sky-color);
+}
+
+.page-title-area .title-content ul li span {
+  display: inline-block;
+  color: var(--white-color);
+}
+
+.about-area.four {
+  background-color: var(--white-color);
+}
+
+@media only screen and (max-width: 767px) {
+  .page-title-area {
+    height: 400px;
+  }
+  .page-title-area .title-content {
+    margin-top: 80px;
+  }
+  .page-title-area .title-content h2 {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .page-title-area {
+    height: 400px;
+  }
+  .page-title-area .title-content {
+    margin-top: 50px;
+  }
+}
+/*# sourceMappingURL=about.css.map */

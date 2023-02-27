@@ -1,0 +1,148 @@
+.title-bg-contact {
+  background-image: url("../../images/title/new_bg4.jpg");
+}
+
+.contact-area .map-item {
+  margin-bottom: 30px;
+  padding-right: 20px;
+}
+
+.contact-area .map-item iframe {
+  width: 100%;
+  height: 520px;
+  border: 0;
+  display: block;
+  width: 100%;
+}
+
+.contact-area #contactForm {
+  margin-bottom: 30px;
+}
+
+.contact-area #contactForm h3 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.contact-area #contactForm .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-area #contactForm .form-group .form-control {
+  height: 50px;
+  border: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0px 0px 20px 0px #f1f1f1;
+          box-shadow: 0px 0px 20px 0px #f1f1f1;
+}
+
+.contact-area #contactForm .form-group .form-control:focus {
+  border: 0;
+  -webkit-box-shadow: 0px 0px 20px 0px #f1f1f1;
+          box-shadow: 0px 0px 20px 0px #f1f1f1;
+}
+
+.contact-area #contactForm .form-group textarea {
+  height: auto !important;
+  padding-top: 13px;
+}
+
+.contact-area #contactForm .form-check {
+  margin-bottom: 0;
+}
+
+.contact-area #contactForm .form-check .form-check-input {
+  border-radius: 0;
+  margin-top: 4px;
+}
+
+.contact-area #contactForm .form-check a {
+  display: inline-block;
+  color: var(--main-color);
+  font-weight: 500;
+}
+
+.contact-area #contactForm .form-check a:hover {
+  color: var(--paragraph-color);
+}
+
+.contact-area #contactForm .common-btn {
+  width: 100%;
+  display: block;
+  border-radius: 0;
+}
+
+.contact-area #contactForm .list-unstyled {
+  margin-top: 10px;
+  color: #dc3545 !important;
+}
+
+.contact-area #contactForm .text-danger {
+  margin-bottom: 0;
+  margin-top: 10px;
+  color: #dc3545 !important;
+}
+
+.contact-area #contactForm .text-success {
+  margin-bottom: 0;
+  margin-top: 10px;
+  color: #198754 !important;
+}
+
+.contact-info-item {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 40px 40px;
+  -webkit-box-shadow: 0px 0px 20px 0px #e8eff0;
+          box-shadow: 0px 0px 20px 0px #e8eff0;
+}
+
+.contact-info-item i {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
+  font-size: 30px;
+  border-radius: 50%;
+  color: var(--white-color);
+  background-color: var(--main-color);
+  margin-bottom: 20px;
+}
+
+.contact-info-item h3 {
+  margin-bottom: 12px;
+  font-size: 24px;
+}
+
+.contact-info-item a {
+  display: block;
+  color: var(--paragraph-color);
+}
+
+.contact-info-item a:hover {
+  color: var(--main-color);
+}
+
+@media only screen and (max-width: 767px) {
+  .contact-area #contactForm h3 {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+  .contact-area .map-item {
+    padding-right: 0;
+  }
+  .contact-info-item {
+    padding: 30px 15px;
+  }
+  .contact-info-item h3 {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .contact-area .map-item {
+    padding-right: 0;
+  }
+}
+/*# sourceMappingURL=contact.css.map */
