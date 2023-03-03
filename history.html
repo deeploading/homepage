@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link rel="stylesheet" href="assets/css/history-style.css">
+  <title>Responsive Vertical Timeline | CodyHouse</title>
+</head>
+<body>
+
+  <section class="cd-timeline js-cd-timeline">
+    <div class="container max-width-lg cd-timeline__container">
+      <div class="cd-timeline__block">
+        <div class="cd-timeline__img cd-timeline__img--event">
+          <p style="color:aliceblue">2023</p>
+        </div> <!-- cd-timeline__img -->
+
+        <div class="cd-timeline__content text-component">
+          <h2>2023</h2>
+          <p class="color-contrast-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+
+        </div> <!-- cd-timeline__content -->
+      </div> <!-- cd-timeline__block -->
+
+      <div class="cd-timeline__block">
+        <div class="cd-timeline__img cd-timeline__img--event">
+          <p style="color:aliceblue">2022</p>
+        </div> <!-- cd-timeline__img -->
+
+        <div class="cd-timeline__content text-component">
+          <h2>2022</h2>
+          <p class="color-contrast-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
+
+        </div> <!-- cd-timeline__content -->
+      </div> <!-- cd-timeline__block -->
+
+      </div> <!-- cd-timeline__block -->
+    </div>
+  </section> <!-- cd-timeline -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+<script>
+  const li = document.querySelectorAll('.menu li')[0]
+  li.addEventListener('click', (e)=>{
+      e.preventDefault()
+      alert('Home Clicked')
+      window.location.href='/index.html'
+  })
+</script>
