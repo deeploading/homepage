@@ -22,7 +22,6 @@
         <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
         <!-- Style CSS -->
         <link rel="stylesheet" href="assets/css/style.css">
-
         <title>DeepLoading</title>
 
         <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -229,7 +228,7 @@
                             <h3>
                                 <a href="service-details2.html">은어·속어 음성 데이터 <br>인식 변환 기술</a>
                             </h3>
-                            <p class="kr-common">연령대별 특징적 발화가 포함된 음성 데이터의 의미를 음성인식 학습모델을 통해 전사하고, 전사된 문장의 은어/속어를 표준어로 기계번역하여 제시합니다.</p>
+                            <p>연령대별 특징적 발화가 포함된 음성 데이터의 의미를 음성인식 학습모델을 통해 전사하고, 전사된 문장의 은어/속어를 표준어로 기계번역하여 제시합니다.</p>
                             <a class="features-btn" href="service-details2.html">
                                 <i class='bx bx-right-arrow-alt'></i>
                             </a>
@@ -252,57 +251,73 @@
             </div>
         </div>
         <!-- End Features -->
-
+   
         <!-- Partner -->
-        <div class="partner-area ptb-100">
-            <div class="container">
-                
-                <div class="partner-slider owl-theme owl-carousel">
-
-                    <div class="partner-item">
-                        <img src="assets/images/partner/hyundai.png" alt="Partner">
-                    </div>
-
-                    <div class="partner-item">
-                        <img src="assets/images/partner/nia.png" alt="Partner">
-                    </div>
-
-                    <div class="partner-item">
-                        <img src="assets/images/partner/kaist.png" alt="Partner">
-                    </div>
-
-                    <div class="partner-item">
-                        <img src="assets/images/partner/bespin.png" alt="Partner">
-                    </div>
-                    
-                    <div class="partner-item">
-                        <img src="assets/images/partner/quantec.png" alt="Partner">
-                    </div>
-
-                    <div class="partner-item">
-                        <img src="assets/images/partner/all4land.png" alt="Partner">
-                    </div>
-
-                    <div class="partner-item">
-                        <img src="assets/images/partner/eco.png" alt="Partner">
-                    </div>
-
-                    <div class="partner-item">
-                        <img src="assets/images/partner/hufs.png" alt="Partner">
-                    </div>
-
-                    <div class="partner-item">
-                        <img src="assets/images/partner/kotech.png" alt="Partner">
-                    </div>
-
-                    <div class="partner-item">
-                        <img src="assets/images/partner/insightinfo.png" alt="Partner">
-                    </div>
-
-                </div>
-            </div>
+        <div>
+			<div class="partner-slider owl-theme owl-carousel">
+				<script>
+				$(document).ready(function() {
+				  var owl = $('.owl-carousel');
+				  owl.owlCarousel({
+					margin: 100,
+					nav: true,
+					loop: true,
+					responsive: {
+					  0: {
+						items: 1
+					  },
+					  600: {
+						items: 3
+					  },
+					  1000: {
+						items: 5
+					  }
+					}
+				  })
+				})
+				</script>
+			</div>
         </div>
-        <!-- End Partner -->
+
+        <div class="partner-area ptb-100">
+		  <div class="container">
+			<div class="large-12 columns">
+			  <div class="owl-carousel owl-theme">
+				<div class="item">
+				  <h4><img src="assets/images/partner/hyundai.png" alt="Partner"></h4>
+				</div>
+				<div class="item">
+				  <h4><img src="assets/images/partner/nia.png" alt="Partner"></h4>
+				</div>
+				<div class="item">
+				  <h4><img src="assets/images/partner/kaist.png" alt="Partner"></h4>
+				</div>
+				<div class="item">
+				  <h4><img src="assets/images/partner/bespin.png" alt="Partner"></h4>
+				</div>
+				<div class="item">
+				  <h4><img src="assets/images/partner/quantec.png" alt="Partner"></h4>
+				</div>
+				<div class="item">
+				  <h4><img src="assets/images/partner/all4land.png" alt="Partner"></h4>
+				</div>
+				<div class="item">
+				  <h4><img src="assets/images/partner/eco.png" alt="Partner"></h4>
+				</div>
+				<div class="item">
+				  <h4><img src="assets/images/partner/hufs.png" alt="Partner"></h4>
+				</div>
+				<div class="item">
+				  <h4><img src="assets/images/partner/kotech.png" alt="Partner"></h4>
+				</div>
+				<div class="item">
+				  <h4><img src="assets/images/partner/insightinfo.png" alt="Partner"></h4>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
 
         <!-- Footer -->
         <div class="footer-area pt-100">
