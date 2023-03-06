@@ -196,6 +196,11 @@ button:focus {
   font-size: 16px;
 }
 
+.kr-smaller-common {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 14px;
+}
+
 .section-title {
   margin-bottom: 40px;
   position: relative;

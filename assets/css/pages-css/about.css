@@ -2,6 +2,12 @@
   background-image: url("../../images/title/new_bg5.jpg");
 }
 
+.history-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .page-title-area {
   background-size: cover;
   background-position: center center;
