@@ -2,6 +2,10 @@
   background-image: url("../../images/title/new_bg5.jpg");
 }
 
+.text-center {
+  text-align:center
+}
+
 .page-title-area {
   background-size: cover;
   background-position: center center;
