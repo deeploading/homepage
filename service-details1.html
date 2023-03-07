@@ -218,15 +218,11 @@
                             <ul>
                                 <li>
                                     <i class='bx bx-chevron-right'></i>
-                                    ChatGPT는 OpenAI가 2022년 11월에 발표한 GPT 구조를 사용한 대화형 인공지능 모델입니다.
+                                    ChatGPT는 OpenAI가 2022년 11월에 발표한 GPT 구조를 사용한 대화형 인공지능 모델로 2022년 발표된 GPT-3.5를 기반으로 만들어졌습니다. 
                                 </li>
                                 <li>
                                     <i class='bx bx-chevron-right'></i>
                                     사용자가 제공하는 문장(프롬프트)을 기반으로 텍스트를 생성하여 사용자를 돕는 것이 ChatGPT의 주 기능입니다.
-                                </li>
-                                <li>
-                                    <i class='bx bx-chevron-right'></i>
-                                    ChatGPT는 2022년 발표된 GPT-3.5를 기반으로 만들어졌습니다. 45 테라 바이트가 넘는 다양한 인터넷 상의 텍스트로 학습하였으며, 1,750억 개의 매개변수로 구성되어 있습니다.
                                 </li>
                                 <li>
                                     <i class='bx bx-chevron-right'></i>
@@ -238,10 +234,107 @@
                                 </li><br>
                             </ul>
 
-                            <h3>GPT란? </h3>
-                            <div style="text-align:center">
+                            <h3>언어 모델의 간략한 히스토리 </h3>
+                            <div class="text-center">
                                 <dic class="img">
-                                    <img src="assets/images/research/gpt.png" width="500" alt="Details">
+                                    <img src="assets/images/research/history_of_language_model.png" alt="Details">
+                                </dic>
+                            </div>
+
+                            <h3><br>RNN(순환 신경망)과 LSTM </h3>
+                            <ul>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    RNN(Recurrent Neural Network)은 입력과 출력을 시퀀스 단위로 처리하는 시퀀스 모델로, 매 스텝의 아웃풋이 다음 스텝의 인풋으로 입력되어 이전 스텝의 정보에 접근이 가능합니다.
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    바닐라 RNN은 짧은 시퀀스에서만 효과를 보이고, 스텝이 길어지면 이전의 정보가 뒤로 충분히 전달되지 못하는 Vanishing Gradient라는 단점이 있습니다. 
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    LSTM(Long Short-Term Memory)은 불필요한 기억을 지우고 기억해야 할 것들은 정하는 방식으로 Vanishing Gradient의 단점을 보완한 RNN 모델입니다. 
+                                </li><br>
+                            </ul>
+
+                            <h3>Seq2seq (Sequence-to-Sequence) </h3>
+                            <div class="text-center">
+                                <dic class="img">
+                                    <img src="assets/images/research/seq2seq.png" alt="Details">
+                                </dic>
+                            </div>
+                            <ul>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    Seq2seq 모델은 인코더-디코더로 구성된 모델로 문장(단어들의 시퀀스)를 입력으로 받아 출력으로 다른 문장을 생성할 수 있습니다. 
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    인코더는 입력 문장의 모든 단어들을 순차적으로 입력 받은 뒤 마지막에 모든 단어 정보를 압축하여 마지막 시점에 컨텍스트 벡터라는 하나의 벡터로 만듭니다. 이 컨텍스트 벡터는 디코더로 전송되며, 디코더는 컨텍스트 벡터를 이용하여 새로운 단어를 하나씩 출력합니다.
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    Seq2seq에서 인코더와 디코더는 RNN 모델인 LSTM으로 구성되어 있습니다.
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    디코더는 다음에 올 단어를 예측하고, 그 예측한 단어를 다음 시점의 RNN 셀의 입력으로 넣는 행위를 반복합니다. 
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    Seq2seq는 입력 시퀀스가 주어졌을 때 올바른 출력 시퀀스를 출력할 확률성을 높이는 방식으로 훈련됩니다.
+                                </li><br>
+                            </ul>
+
+                            <h3>Attention </h3>
+                            <ul>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    어텐션은 시퀀스 요소들 가운데 태스크 수행에 중요한 요소에 집중하는 것입니다.
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    트랜스포머에 사용되는 어텐션은 셀프 어텐션 기법으로, 입력 시퀀스 가운데 태스크 수행에 의미 있는 요소 위주로 정보를 추출할 수 있습니다. 
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    기존 seq2seq 모델은 인코더가 입력 시퀀스를 하나의 벡터로 압축하는 과정에서 입력 시퀀스의 정보가 일부 손실되는 문제점이 있었는데, RNN 대신 셀프 어텐션 기법을 사용하여 디코더가 맨 마지막의 컨텍스트 벡터에만 접근하는 대신 모든 입력 단어에 접근할 수 있게 되었습니다. 
+                                </li><br>
+                            </ul>
+
+                            <h3>Transformer </h3>
+                            <div class="text-center">
+                                <dic class="img">
+                                    <img src="assets/images/research/transformer_architecture.png" width="500" alt="Details">
+                                </dic>
+                            </div>
+                            <ul>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    트랜스포머는 2017년 구글에서 발표한 셀프 어텐션을 사용하는 sequence-to-sequence 모델입니다.
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    트랜스포머는 셀프 어텐션 기술을 사용하여 문장 내의 단어들 사이의 관계를 이해하고, 이를 기반으로 문장의 맥락과 의미를 학습할 수 있는 모델입니다. 
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    트랜스포머의 인코더는 소스 시퀀스 간의 관계 정보를 담은 히든 벡터를 출력합니다. 
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    트랜스포머의 디코더는 인코더가 보내준 히든 벡터를 받아 매번 인풋 시퀀스의 각기 다른 부분에 집중하며 단어를 출력합니다. 
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    트랜스포머는 기계번역과 시계열 예측에 뛰어난 성능을 보이며, GPT와 BERT, chatGPT 같은 다양한 자연어처리 모델들에 사용됩니다. 
+                                </li><br>
+                            </ul>
+
+                            <h3>GPT란? </h3>
+                            <div class="text-center">
+                                <dic class="img">
+                                    <img src="assets/images/research/gpt.png" width="250" alt="Details">
                                 </dic>
                             </div>
                             <ul>
@@ -255,51 +348,28 @@
                                 </li>
                                 <li>
                                     <i class='bx bx-chevron-right'></i>
-                                    GPT는 트랜스포머 모델의 디코더 부분을 가져와 사용하였습니다. 트랜스포머는 셀프 어텐션 기술을 사용하여 문장 내의 단어들 사이의 관계를 이해하고, 이를 기반으로 문장의 맥락과 의미를 학습하는 모델입니다.
+                                    GPT는 트랜스포머의 디코더 부분을 사용하여 이전에 생성된 단어의 문맥에 기반하여 새로운 단어를 매번 생성해냅니다. 
                                 </li>
                                 <li>
                                     <i class='bx bx-chevron-right'></i>
-                                    트랜스포머 모델의 디코더는 인코더의 출력을 입력으로 받아 인코더의 입력과 이전 디코더의 출력에 주목하며 출력 시퀀스를 생성합니다.
-                                </li>
-                                <li>
-                                    <i class='bx bx-chevron-right'></i>
-                                    GPT는 트랜스포머의 디코더 부분을 사용하여 이전에 생성된 단어의 문맥에 기반하여 새로운 단어를 매번 생성해냅니다.
+                                    GPT는 다음에 올 단어를 예측하는 비지도 학습 방식으로 훈련되었습니다. 
                                 </li><br>
                             </ul>
 
-                            <h3>GPT 기술을 사용한 챗봇 </h3>
+                            <h3>GPT-3 </h3>
                             <ul>
                                 <li>
                                     <i class='bx bx-chevron-right'></i>
-                                    AI를 통하여 챗봇의 이해도가 증진되며 더 자연스러운 대화를 이어나갈 수 있습니다.
+                                    GPT-3는 GPT의 3세대 모델로 2020년 OpenAI에서 발표한 언어 모델입니다. 
                                 </li>
                                 <li>
                                     <i class='bx bx-chevron-right'></i>
-                                    AI는 사용자의 데이터나 행동을 분석하여 사용자 맞춤형 대답을 제공할 수 있습니다.
+                                    GPT-3는 이전 세대의 모델들과 기본적인 구조는 같지만 더 많은 1750억개의 파라미터와 96개의 디코더 레이어를 갖고 있으며, 더 많은 데이터를 사용하여 훈련되었습니다.
                                 </li>
                                 <li>
                                     <i class='bx bx-chevron-right'></i>
-                                    AI 챗봇은 CS 비용을 절감할 수 있으며, 담당자가 단순한 응답 업무 대신 더욱 복잡한 작업에 집중할 수 있도록 도울 수 있습니다.
+                                    GPT-3은 이전 세대의 GPT 보다 더 좋은 성능을 보이며, 예시 몇 가지 만으로도 새로운 태크스를 수행하는 퓨 샷 러닝이 가능합니다. 
                                 </li><br>
-                            </ul>
-
-                            <h3>딥로딩의 GPT 챗봇 </h3>
-                            <ul>
-                                <li>
-                                    <i class='bx bx-chevron-right'></i>
-                                    딥로딩의 GPT 챗봇은 ChatGPT와 동일한 대화형 서비스입니다.
-                                <li>
-                                <li>
-                                    <i class='bx bx-chevron-right'></i>
-                                    특정 분야의 대량 데이터로 파인 튜닝이 된 챗봇은 ESG, 법, 금융과 같은 전문 지식이 필요한 분야의 정보를 제공할 수 있습니다.
-                                <li>
-                                    <i class='bx bx-chevron-right'></i>
-                                    딥로딩의 GPT 챗봇은 인터넷 검색보다도 빠르고 정확하며, 사용자 개개인의 상황과 요구에 맞춰져 있는 대답이 가능합니다.
-                                </li>
-                                <li>
-                                    <i class='bx bx-chevron-right'></i>
-                                    딥로딩의 GPT 챗봇은 사용자와 상호 작용을 하며 피드백을 얻어 사용자가 원하는 정보를 더욱 정확하게 제공할 수 있습니다.
-                                </li>
                             </ul>
 
                         </div>
