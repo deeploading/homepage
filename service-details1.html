@@ -199,7 +199,7 @@
 
                     <div class="col-lg-12">
                         <div class="details-content">
-                            <h2>‘ChatGPT’ 개발 및 적용</h2>
+                            <h1>‘ChatGPT’ 개발 및 적용</h1>
                             <p>거대 언어 모델 GPT-3를 미세조정(fine-tuning)한 특정 전문 분야의 챗봇으로 사용자가 질문을 하면 상세하고 정확한 응답을 전달합니다. </p>
                             <div class="row">
                                 <div class="col-sm-6 col-lg-6">
@@ -214,7 +214,7 @@
                                 </div>
                             </div>
 
-                            <h3>ChatGPT란? </h3>
+                            <h2>ChatGPT란? </h2>
                             <ul>
                                 <li>
                                     <i class='bx bx-chevron-right'></i>
@@ -251,7 +251,7 @@
                                                     <p>RNN</p>
                                                 </div>
                                                 <div class="bottom">
-                                                    <p>1986</p>
+                                                    <p>순차적인 데이터 처리를 위한 모델</p>
                                                     <a class="common-link" href="#rnn-lstm">
                                                         Read More
                                                         <i class='bx bx-right-arrow-alt'></i>
@@ -267,7 +267,7 @@
                                                     <p>LSTM</p>
                                                 </div>
                                                 <div class="bottom">
-                                                    <p>1997</p>
+                                                    <p>RNN의 단점을 보완한 모델</p>
                                                     <a class="common-link" href="#rnn-lstm">
                                                         Read More
                                                         <i class='bx bx-right-arrow-alt'></i>
@@ -283,7 +283,7 @@
                                                     <p>Seq2Seq</p>
                                                 </div>
                                                 <div class="bottom">
-                                                    <p>NIPS 2014</p>
+                                                    <p>하나의 시퀀스를 다른 시퀀스로 변환하는 모델</p>
                                                     <a class="common-link" href="#seq2seq">
                                                         Read More
                                                         <i class='bx bx-right-arrow-alt'></i>
@@ -299,8 +299,24 @@
                                                     <p>Attention</p>
                                                 </div>
                                                 <div class="bottom">
-                                                    <p>ICLR 2015</p>
+                                                    <p>시퀀스의 특정 부분에 집중하는 기법 </p>
                                                     <a class="common-link" href="#attention">
+                                                        Read More
+                                                        <i class='bx bx-right-arrow-alt'></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6 col-lg-2">
+                                            <div class="process-item">
+                                                <div class="top">
+                                                    <span>5</span>
+                                                    <p>Transformer</p>
+                                                </div>
+                                                <div class="bottom">
+                                                    <p>어텐션을 사용하여 시퀀스 데이터를 처리하는 모델 </p>
+                                                    <a class="common-link" href="#transformer">
                                                         Read More
                                                         <i class='bx bx-right-arrow-alt'></i>
                                                     </a>
@@ -311,13 +327,14 @@
                                         <div class="col-sm-6 col-lg-2">
                                             <div class="process-item">
                                                 <div class="top">
-                                                    <span>5</span>
+                                                    <span>6</span>
                                                     <p>GPT</p>
                                                 </div>
                                                 <div class="bottom">
-                                                    <p  id="rnn-lstm">GPT-1 (2018), GPT-3 (2020)</p>
+                                                    <p  id="rnn-lstm">트랜스포머의 디코더를 사용한 언어 모델</p>
                                                     <a class="common-link" href="#gpt">
                                                         Read More
+                                                        <i class='bx bx-right-arrow-alt'></i>
                                                     </a>
                                                 </div>
                                             </div>
@@ -346,7 +363,7 @@
                             <h3>Seq2seq (Sequence-to-Sequence) </h3>
                             <div class="text-center">
                                 <dic class="img">
-                                    <img src="assets/images/research/seq2seq.png" alt="Details">
+                                    <img src="assets/images/research/seq2seq.png" width="800" alt="Details">
                                 </dic>
                             </div>
                             <ul>
@@ -378,7 +395,7 @@
                                     <i class='bx bx-chevron-right'></i>
                                     어텐션은 시퀀스 요소들 가운데 태스크 수행에 중요한 요소에 집중하는 것입니다.
                                 </li>
-                                <li>
+                                <li id="transformer">
                                     <i class='bx bx-chevron-right'></i>
                                     트랜스포머에 사용되는 어텐션은 셀프 어텐션 기법으로, 입력 시퀀스 가운데 태스크 수행에 의미 있는 요소 위주로 정보를 추출할 수 있습니다. 
                                 </li>
@@ -457,6 +474,109 @@
                                     GPT-3은 이전 세대의 GPT 보다 더 좋은 성능을 보이며, 예시 몇 가지 만으로도 새로운 태크스를 수행하는 퓨 샷 러닝이 가능합니다. 
                                 </li><br>
                             </ul>
+
+                            <hr/>
+
+                            <h2><br>Fine-Tuning GPT </h2>
+                            <p>GPT 모델을 fine-tuning(미세조정)하는 방법은 대표적으로 아래와 같다.</p>
+                            <ol type="1">
+                                <li>Fine-Tuning</li>
+                                <li>Few-Shot Learning</li>
+                                <li>One-Shot Learning</li>
+                                <li>Zero-Shot Learning</li>
+                                <li>LoRA (Low-Rank Adaptation of Large Language Models)</li>
+                                <br>
+                            </ol>
+
+                            <div class="text-center">
+                                <dic class="img">
+                                    <img src="assets/images/research/finetuning_gpt.png" alt="Details">
+                                </dic>
+                            </div>
+
+                            <h3>Fine-Tuning (FT)</h3>
+                            <p>가장 일반적인 접근법으로, 사전학습된 모델을 원하는 태스크에 맞도록 지도학습 데이터셋으로 학습시키는 과정을 포함합니다. 보통 수천~수만 개의 라벨링된 예시를 필요로 한다. </p><br>
+
+                            <h5>장점</h5>
+                            <ul>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    많은 벤치마크에서 강력한 성능을 가집니다.
+                                </li><br>
+                            </ul>
+                            
+                            <h5>단점</h5>
+                            <ul>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    모든 태스크마다 큰 데이터셋을 새로이 필요로 합니다.
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    분포 외의 데이터에 대해서는 일반화를 잘 하지 못합니다.
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    학습 데이터에 거짓/비논리적인 특성이 있는 경우 이를 흡수할 수도, 사람에 비해 불공정한 비교로 이어질 수도 있습니다.
+                                </li><br>
+                            </ul>
+
+                            <h3>Few-Shot Learning</h3>
+                            <p>데이터셋에서 예시는 문맥과 원하는 답이 있고, few-shot은 단 K개의 문맥과 답이 주어진다. 이후 마지막으로 단 한 개의 문맥이 주어지면, 모델은 정확한 답을 생성해 내야 한다. 모델의 context window에 넣을 수 있는 만큼 많은 예시(K)를 넣는다. 일반적으로 가능한 context 길이 2048에 들어가는 10~100개의 예시를 넣는다.</p><br>
+
+                            <h5>장점</h5>
+                            <ul>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    task-specific한 데이터에 대한 필요를 크게 줄여줍니다. 극단적으로는 몇 개 뿐이어도 충분합니다.
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    지나치게 크고 좁은 분포를 갖는 미세조정용 데이터셋을 학습할 가능성을 줄일 수 있습니다.
+                                </li><br>
+                            </ul>
+                            
+                            <h5>단점</h5>
+                            <ul>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    미세조정과 비교하여 성능을 떨어집니다.
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    적은 수라 해도 여전히 task-specific한 데이터를 필요로 합니다.
+                                </li><br>
+                            </ul>
+
+                            <h3>One-Shot Learning</h3>
+                            <p>few-shot과 비슷하나 단 한 개의 예시와, task에 대한 자연어 지시문(instruction)이 제공된다는 점이 다릅니다. </p><br>
+
+                            <h3>Zero-Shot Learning</h3>
+                            <p>예시는 넣지 않고, 수행할 태스크에 대한 설명(description) 혹은 지시문(instruction)만을 넣습니다. </p><br>
+
+                            <h5>장점</h5>
+                            <ul>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    task-specific한 데이터에 대한 필요를 크게 줄여줍니다. 극단적으로는 몇 개 뿐이어도 충분합니다.
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    지나치게 크고 좁은 분포를 갖는 미세조정용 데이터셋을 학습할 가능성을 줄일 수 있습니다.
+                                </li><br>
+                            </ul>
+                            
+                            <h5>단점</h5>
+                            <ul>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    미세조정과 비교하여 성능을 떨어집니다.
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    적은 수라 해도 여전히 task-specific한 데이터를 필요로 합니다.
+                                </li><br>
+                            </ul>
                             
                         </div>
                     </div>
@@ -466,9 +586,9 @@
         </div>
         <!-- End Service Details -->
 
-                <!-- Process -->
-                
-                <!-- End Process -->
+        <!-- Process -->
+        
+        <!-- End Process -->
 
         <!-- Footer -->
         <div class="footer-area pt-100">
