@@ -234,12 +234,98 @@
                                 </li><br>
                             </ul>
 
-                            <h3>언어 모델의 간략한 히스토리 </h3>
-                            <div class="text-center">
-                                <dic class="img">
-                                    <img src="assets/images/research/history_of_language_model.png" alt="Details">
-                                </dic>
-                            </div>
+                            <section class="process-area pt-100 pb-70">
+        
+                                <div class="container">
+                    
+                                    <div class="section-title">
+                                        <h2>언어 모델의 간략한 히스토리</h2>
+                                    </div>
+                    
+                                    <div class="row justify-content-center">
+                    
+                                        <div class="col-sm-6 col-lg-2">
+                                            <div class="process-item">
+                                                <div class="top">
+                                                    <span>1</span>
+                                                    <p>RNN</p>
+                                                </div>
+                                                <div class="bottom">
+                                                    <p>1986</p>
+                                                    <a class="common-link" href="#rnn-lstm">
+                                                        Read More
+                                                        <i class='bx bx-right-arrow-alt'></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="col-sm-6 col-lg-2">
+                                            <div class="process-item">
+                                                <div class="top">
+                                                    <span>2</span>
+                                                    <p>LSTM</p>
+                                                </div>
+                                                <div class="bottom">
+                                                    <p>1997</p>
+                                                    <a class="common-link" href="#rnn-lstm">
+                                                        Read More
+                                                        <i class='bx bx-right-arrow-alt'></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="col-sm-6 col-lg-2">
+                                            <div class="process-item">
+                                                <div class="top">
+                                                    <span>3</span>
+                                                    <p>Seq2Seq</p>
+                                                </div>
+                                                <div class="bottom">
+                                                    <p>NIPS 2014</p>
+                                                    <a class="common-link" href="#seq2seq">
+                                                        Read More
+                                                        <i class='bx bx-right-arrow-alt'></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="col-sm-6 col-lg-2">
+                                            <div class="process-item">
+                                                <div class="top">
+                                                    <span>4</span>
+                                                    <p>Attention</p>
+                                                </div>
+                                                <div class="bottom">
+                                                    <p>ICLR 2015</p>
+                                                    <a class="common-link" href="#attention">
+                                                        Read More
+                                                        <i class='bx bx-right-arrow-alt'></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-sm-6 col-lg-2">
+                                            <div class="process-item">
+                                                <div class="top">
+                                                    <span>5</span>
+                                                    <p>GPT</p>
+                                                </div>
+                                                <div class="bottom">
+                                                    <p  id="rnn-lstm">GPT-1 (2018), GPT-3 (2020)</p>
+                                                    <a class="common-link" href="#gpt">
+                                                        Read More
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                    
+                                    </div>
+                                </div>
+                            </section>
 
                             <h3><br>RNN(순환 신경망)과 LSTM </h3>
                             <ul>
@@ -247,7 +333,7 @@
                                     <i class='bx bx-chevron-right'></i>
                                     RNN(Recurrent Neural Network)은 입력과 출력을 시퀀스 단위로 처리하는 시퀀스 모델로, 매 스텝의 아웃풋이 다음 스텝의 인풋으로 입력되어 이전 스텝의 정보에 접근이 가능합니다.
                                 </li>
-                                <li>
+                                <li  id="seq2seq">
                                     <i class='bx bx-chevron-right'></i>
                                     바닐라 RNN은 짧은 시퀀스에서만 효과를 보이고, 스텝이 길어지면 이전의 정보가 뒤로 충분히 전달되지 못하는 Vanishing Gradient라는 단점이 있습니다. 
                                 </li>
@@ -276,7 +362,7 @@
                                     <i class='bx bx-chevron-right'></i>
                                     Seq2seq에서 인코더와 디코더는 RNN 모델인 LSTM으로 구성되어 있습니다.
                                 </li>
-                                <li>
+                                <li id="attention">
                                     <i class='bx bx-chevron-right'></i>
                                     디코더는 다음에 올 단어를 예측하고, 그 예측한 단어를 다음 시점의 RNN 셀의 입력으로 넣는 행위를 반복합니다. 
                                 </li>
@@ -321,7 +407,7 @@
                                     <i class='bx bx-chevron-right'></i>
                                     트랜스포머의 인코더는 소스 시퀀스 간의 관계 정보를 담은 히든 벡터를 출력합니다. 
                                 </li>
-                                <li>
+                                <li id="gpt">
                                     <i class='bx bx-chevron-right'></i>
                                     트랜스포머의 디코더는 인코더가 보내준 히든 벡터를 받아 매번 인풋 시퀀스의 각기 다른 부분에 집중하며 단어를 출력합니다. 
                                 </li>
@@ -371,7 +457,7 @@
                                     GPT-3은 이전 세대의 GPT 보다 더 좋은 성능을 보이며, 예시 몇 가지 만으로도 새로운 태크스를 수행하는 퓨 샷 러닝이 가능합니다. 
                                 </li><br>
                             </ul>
-
+                            
                         </div>
                     </div>
 
@@ -379,6 +465,10 @@
             </div>
         </div>
         <!-- End Service Details -->
+
+                <!-- Process -->
+                
+                <!-- End Process -->
 
         <!-- Footer -->
         <div class="footer-area pt-100">
