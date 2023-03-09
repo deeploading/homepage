@@ -467,24 +467,28 @@
                                 </li>
                                 <li>
                                     <i class='bx bx-chevron-right'></i>
-                                    GPT-3는 이전 세대의 모델들과 기본적인 구조는 같지만 더 많은 1750억개의 파라미터와 96개의 디코더 레이어를 갖고 있으며, 더 많은 데이터를 사용하여 훈련되었습니다.
+                                    GPT-3는 이전 세대의 모델들과 기본적인 구조는 같지만 더 많은 1750억개의 파라미터와 96개의 디코더 레이어를 갖고 있으며, 더 많은 데이터를 사용하여 훈련되어 이전 세대의 GPT 보다 더 좋은 성능을 보입니다.
                                 </li>
                                 <li>
                                     <i class='bx bx-chevron-right'></i>
-                                    GPT-3은 이전 세대의 GPT 보다 더 좋은 성능을 보이며, 예시 몇 가지 만으로도 새로운 태크스를 수행하는 퓨 샷 러닝이 가능합니다. 
+                                    GPT-3는 예시 몇 가지 만으로도 새로운 태크스를 수행하는 퓨 샷 러닝과, 예시가 없이도 다양한 자연어 처리 태스크를 해결할 수 있는 제로 샷 러닝 능력을 갖고 있습니다.
+                                </li><li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    GPT-3는 이전 세대의 모델들보다 영어를 제외한 다른 언어들을 다루는 능력이 더 뛰어납니다. 
                                 </li><br>
                             </ul>
 
                             <hr/>
 
                             <h2><br>Fine-Tuning GPT </h2>
-                            <p>GPT 모델을 fine-tuning(미세조정)하는 방법은 대표적으로 아래와 같다.</p>
+                            <p>GPT 모델을 fine-tuning(미세조정)하는 방법은 대표적으로 아래와 같습니다.</p>
                             <ol type="1">
                                 <li>Fine-Tuning</li>
                                 <li>Few-Shot Learning</li>
                                 <li>One-Shot Learning</li>
                                 <li>Zero-Shot Learning</li>
                                 <li>LoRA (Low-Rank Adaptation of Large Language Models)</li>
+                                <li>P-Tuning</li>
                                 <br>
                             </ol>
 
@@ -522,7 +526,7 @@
                             </ul>
 
                             <h3>Few-Shot Learning</h3>
-                            <p>데이터셋에서 예시는 문맥과 원하는 답이 있고, few-shot은 단 K개의 문맥과 답이 주어진다. 이후 마지막으로 단 한 개의 문맥이 주어지면, 모델은 정확한 답을 생성해 내야 한다. 모델의 context window에 넣을 수 있는 만큼 많은 예시(K)를 넣는다. 일반적으로 가능한 context 길이 2048에 들어가는 10~100개의 예시를 넣는다.</p><br>
+                            <p>데이터셋에서 예시는 문맥과 원하는 답이 있고, few-shot은 단 K개의 문맥과 답이 주어집니다. 이후 마지막으로 단 한 개의 프롬프트가 주어지면, 모델은 정확한 답을 생성해 내야 합니다. 모델의 context window에 넣을 수 있는 만큼 많은 예시(K)를 넣습니다. 일반적으로 가능한 context 길이 2048에 들어가는 10~100개의 예시를 넣습니다.</p><br>
 
                             <h5>장점</h5>
                             <ul>
@@ -549,20 +553,24 @@
                             </ul>
 
                             <h3>One-Shot Learning</h3>
-                            <p>few-shot과 비슷하나 단 한 개의 예시와, task에 대한 자연어 지시문(instruction)이 제공된다는 점이 다릅니다. </p><br>
+                            <p>few-shot과 비슷하나 단 한 개의 예시와, 태스크에 대한 자연어 지시문(instruction)이 제공된다는 점이 다릅니다. </p><br>
 
                             <h3>Zero-Shot Learning</h3>
-                            <p>예시는 넣지 않고, 수행할 태스크에 대한 설명(description) 혹은 지시문(instruction)만을 넣습니다. </p><br>
+                            <p>예시는 넣지 않고, 수행할 태스크에 대한 설명(description) 혹은 지시문(instruction)만을 넣습니다. 사람이 태스크를 수행하는 것과 가장 가까운 방식입니다. 사람은 텍스트 지시문(예: 'Cheese'라는 영어 단어를 프랑스어로 번역하라)만을 보고도 무엇을 해야 할지 알 수 있기 때문입니다.</p><br>
 
                             <h5>장점</h5>
                             <ul>
                                 <li>
                                     <i class='bx bx-chevron-right'></i>
-                                    task-specific한 데이터에 대한 필요를 크게 줄여줍니다. 극단적으로는 몇 개 뿐이어도 충분합니다.
+                                    노이즈나 이상치(outlier) 데이터가 없습니다.
                                 </li>
                                 <li>
                                     <i class='bx bx-chevron-right'></i>
-                                    지나치게 크고 좁은 분포를 갖는 미세조정용 데이터셋을 학습할 가능성을 줄일 수 있습니다.
+                                    거짓 상관관계가 없습니다.
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    따라서 가장 편의성이 높습니다.
                                 </li><br>
                             </ul>
                             
@@ -570,14 +578,234 @@
                             <ul>
                                 <li>
                                     <i class='bx bx-chevron-right'></i>
-                                    미세조정과 비교하여 성능을 떨어집니다.
+                                    예시가 없으면 태스크에 대해 제대로 이해하지 못할 수 있다.
+                                </li><br>
+                            </ul>
+
+                            <h4>In-context learning </h4>
+                            <div class="text-center">
+                                <dic class="img">
+                                    <img src="assets/images/research/incontext_learning.png" width="800" alt="Details">
+                                </dic>
+                            </div>
+                            <ul>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    예시 수 K를 늘릴 수록 성능이 향상됩니다. 즉, 주어지는 예제가 많아질수록 큰 폭으로 성능이 높아집니다.
                                 </li>
                                 <li>
                                     <i class='bx bx-chevron-right'></i>
-                                    적은 수라 해도 여전히 task-specific한 데이터를 필요로 합니다.
+                                    모델이 커질수록 in-context learning의 효율이 높아집니다.
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    태스크에 대한 프롬프트를 함께 넣는 것이 도움이 됩니다.
                                 </li><br>
                             </ul>
+
+                            <h3>LoRA: Low-Rank Adaptation of Large Language Models </h3>
+                            <div class="text-center">
+                                <dic class="img">
+                                    <img src="assets/images/research/LoRA_architecture.png" width="300" alt="Details">
+                                </dic>
+                            </div>
+                            <ul>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    GPT-3같은 거대한 모델을 fine-tuning하면 1000억 개가 이상의 파라미터들을 모두 재학습시켜야 합니다. 이는 계산량도 많고 시간도 오래 걸리는 부담스러운 작업입니다. LoRA는 이를 해결할 수 있습니다.
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    원래 파라미터는 동결시키고 트랜스포머 구조의 각 레이어마다 학습가능한 rank decomposition matrix들을 추가하는 방식을 도입하였습니다.
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    LoRA 방식으로 GPT-3를 fine-tuning하면 메모리는 3배, 파라미터는 10,000배 줄일 수 있습니다. 또한 RoBERTA, DeBERTa, GPT-2, GPT-3같은 모델에서 비슷하거나 더 높은 fine-tuning 성능을 보였습니다.
+                                </li>
+                                <div class="text-center">
+                                    <dic class="img">
+                                        <img src="assets/images/research/LoRA_performance.png" width="800" alt="Details">
+                                    </dic>
+                                </div>
+                                
+                            </ul>
+
+                            <h5>장점</h5>
+                            <ul>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    사전학습된 모델을 그대로 공유하면서 작은 LoRA 모듈을 여럿 만들 수 있습니다. 모델을 공유하면서 새로 학습시키는 부분(위 그림의 오른쪽에 있는 A, B)만 쉽게 바꿔 끼울 수 있습니다.
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    레이어에 추가한 작은 matrix들만 학습시키고 효율적으로 메모리를 사용할 수 있습니다.
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    Inference 과정에서 추가적인 latency 없이 사용할 수 있습니다.
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    기존의 많은 방법들과도 동시 사용 가능합니다.
+                                </li><br>
+                            </ul>
+
+                            <h3>P-Tuning </h3>
+                            <div class="text-center">
+                                <dic class="img">
+                                    <img src="assets/images/research/Ptuning_architecture.png" width="600" alt="Details">
+                                </dic>
+                            </div>
+                            <ul>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    LoRA와 기본 원리는 비슷합니다. 사전훈련된 가중치는 그대로 두고, 거기에 별도로 추가된 레이어만 새로운 데이터로 학습을 합니다.
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    임베딩 레이어에 BiLSTM과 MLP 레이어를 붙입니다. 이렇게 하면 프롬프트의 임베딩이 학습 데이터에 딱 맞게 나오도록 할 수 있습니다.
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    아래 그림과 같이 추가 파라미터의 위치에서 LoRA와 차이가 있습니다.
+                                </li>
+                                <div class="text-center">
+                                    <dic class="img">
+                                        <img src="assets/images/research/Ptuning_and_LoRA.png" width="700" alt="Details">
+                                    </dic>
+                                </div>
+                            </ul>
+
+                            <section class="process-area pt-100 pb-70">
+        
+                                <div class="container">
+                    
+                                    <div class="section-title">
+                                        <h2>Fine-Tuning GPT Model</h2>
+                                    </div>
+                    
+                                    <div class="row justify-content-center">
+                    
+                                        <div class="col-sm-6 col-lg-2">
+                                            <div class="process-item">
+                                                <div class="top">
+                                                    <span>1</span>
+                                                    <p>모델 선택</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="col-sm-6 col-lg-2">
+                                            <div class="process-item">
+                                                <div class="top">
+                                                    <span>2</span>
+                                                    <p>데이터 준비</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="col-sm-6 col-lg-2">
+                                            <div class="process-item">
+                                                <div class="top">
+                                                    <span>3</span>
+                                                    <p>파라미터 튜닝</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="col-sm-6 col-lg-2">
+                                            <div class="process-item">
+                                                <div class="top">
+                                                    <span>4</span>
+                                                    <p>모델 훈련</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6 col-lg-2">
+                                            <div class="process-item">
+                                                <div class="top">
+                                                    <span>5</span>
+                                                    <p>모델 평가</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <p>
+                                            <br>1. 사전훈련된 GPT 모델 선택<br>
+                                            사전학습된 GPT 모델을 선택합니다. GPT-2, GPT-3 등 다양한 모델이 있습니다.</p>
+                                        <p>
+                                            <br>2. 훈련 데이터 준비<br>
+                                            GPT 모델과 호환되는 형식의 훈련 데이터를 준비합니다. 이 과정에서는 텍스트 데이터를 토큰으로 전환하고 모델이 훈련할 수 있도록 입력-출력 쌍으로 제공합니다.
+                                        </p>
+                                        <p>
+                                            <br>3. 파라미터 튜닝<br>
+                                            태스크에 적절하도록 사전학습된 GPT 모델을 조정하는 작업입니다. 학습률(learning rate), 배치 크기, 에포크 수 등의 구체적인 파라미터를 정의하는 과정이 필요합니다.</p>
+                                        <p>
+                                            <br>4. 모델 훈련<br>
+                                            훈련 데이터를 사용하여 모델을 훈련시킵니다. 입력-출력 쌍을 모델에 전달하고 모델의 예측 결과와 실제 출력 사이의 오류를 최소화하기 위해 모델의 파라미터를 조정합니다.
+                                        </p>
+                                        <p>
+                                            <br>5. 모델 평가<br>
+                                            GPT 모델의 fine-tuning이 완료된 후, 검증용 데이터를 이용하여 모델의 성능을 평가합니다. 정확도, f1 점수, BLEU 점수 등의 메트릭을 사용하여 측정할 수 있습니다.
+                                        </p>
+                    
+                                    </div>
+                                </div>
+                            </section>
+
+                            <h3><br><br>GPT 활용 사례 </h3>
+                            <h5>일본 법률상담 서비스 </h5>
+                            <div class="text-center">
+                                <dic class="img">
+                                    <img src="assets/images/research/legal_gpt.jpg" width="600" alt="Details">
+                                </dic>
+                            </div>
+                            <p>2월 14일 아사히신문은 온라인 법률 상담 서비스인 ‘모두의 법률상담’을 운영하는 변호사닷컴이 'ChatGPT'를 활용한 신규 법률 상담 서비스를 제공한다고 보도했습니다. ChatGPT에 일본의 법률과 과거 판례를 학습시킨 뒤, 일반인들이 묻는 말에 답하도록 하는 방식입니다. 이 서비스는 무료 상담으로 제공될 예정이며, 보다 많은 일반인들이 쉽게 법률 상담을 받을 수 있을 것으로 보입니다.</p><br>
                             
+                            <h5>MS new ‘Bing’ </h5>
+                            <div class="text-center">
+                                <dic class="img">
+                                    <img src="assets/images/research/new_bing.jpg" width="700" alt="Details">
+                                </dic>
+                            </div>
+                            <p>마이크로소프트(MS)가 2월 28일(현지시간) 블로그를 통해 '윈도11'의 주요 업데이트 내용을 공개하면서 'ChatGPT'를 탑재한 새 검색엔진 '빙'을 결합한다고 발표했습니다. 파노스 파네이 MS 최고 제품 책임자는 "윈도 PC는 그 어느 때보다 우리 일상에 가까워졌으며, 이는 인공지능(AI) 도입이 이끄는 새로운 컴퓨팅 흐름에 따라 더욱 현실화되고 있다"면서 "새로운 AI 시대에 맞춰 발표되는 윈도11의 주요 업데이트는 사람들이 PC에서 작업하는 방식을 재창조하고 개선해 나갈 것"이라고 말했습니다. ChatGPT를 탑재한 새 검색엔진 '뉴 빙'이 구글에 빼앗긴 검색시장을 탈환할 수 있을까요? </p><br>
+                            
+                            <h5>굿닥 GPT 기반 건강 AI챗봇 </h5>
+                            <div class="text-center">
+                                <dic class="img">
+                                    <img src="assets/images/research/gooddoc.png" width="700" alt="Details">
+                                </dic>
+                            </div>
+                            <p>굿닥은 ChatGPT API가 도입된 ‘건강 AI챗봇’ 서비스를 출시했습니다. 신규 서비스는 굿닥 앱(App) 내 ‘건강AI’를 통해 사용할 수 있습니다. 건강·시술과 관련된 사용자 질문에 인공지능이 1초 이내에 답변을 제공합니다. 인공지능 답변이 즉각적으로 이루어지는 만큼, 남녀노소 누구나 쉽고 빠르게 사용이 가능하다고 합니다. AI챗봇 서비스 출시로 인공지능을 활용해 사용자 질문에 대한 직·간접적인 솔루션을 신속하게 제공할 수 있어 진료 연계성이 한층 강화될 것으로 기대됩니다. </p><br>
+                            
+                            <h5>SKT '에이닷'과 ChatGPT 연계 </h5>
+                            <div class="text-center">
+                                <dic class="img">
+                                    <img src="assets/images/research/skt_adot.jpg" width="500" alt="Details">
+                                </dic>
+                            </div>
+                            <p>SK텔레콤이 성장형 AI 서비스 ‘에이닷’에 ChatGPT와 같은 생성AI(Generative AI) 모델을 접목하는 등 지속적인 R&D 투자를 통해 국내 초거대 AI 서비스 시장을 선도해나갈 방침입니다. 현재 AI 대화 서비스는 명령 위주의 ‘목적성 대화’와 친구처럼 사소한 대화를 함께 할 수 있는 ‘감성 대화’, 지식을 얻을 때 사용할 수 있는 ‘지식 대화’로 크게 나뉘어 지는데 ChatGPT와 연계되면 ChatGPT가 보유한 방대한 정보를 활용해 지식 대화가 한층 강화될 수 있을 것으로 보입니다. </p><br>        
+                        
+                            <h3><br>ChatGPT 기술 현황 </h3>
+                            <ul>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    2023년 2월 7일 OpenAI와 파트너십을 활용하여 Microsoft는 Microsoft Bing의 프리뷰 버전 “the new Bing”을 출시했습니다.
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    중국의 검색 엔진 Baidu가 ChatGPT 스타일의 서비스 “ERNIE Bot”을 출시하겠다고 발표했습니다.
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    네이버가 2023년 상반기 중으로 ChatGPT 스타일의 서비스 “SearchGPT”을 출시하겠다고 발표했습니다.
+                                </li>
+                                <li>
+                                    <i class='bx bx-chevron-right'></i>
+                                    러시아의 검색 엔진 Yandex가 2023년이 끝나기 전에 ChatGPT 스타일의 서비스 “YaLM 2.0”을 출시하겠다고 발표했습니다.
+                                </li>
+                            </ul>
                         </div>
                     </div>
 
